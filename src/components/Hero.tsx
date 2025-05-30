@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden pt-20 sm:pt-24 pb-8 px-4 md:pt-0 md:px-0">
+    <section id="home" className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden pt-28 sm:pt-32 pb-8 px-4 md:pt-24 md:px-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 bg-brand-purple rounded-full filter blur-3xl animate-pulse"></div>
@@ -48,7 +48,7 @@ const Hero = () => {
           {/* Subtitle with Better Mobile Spacing */}
           <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto px-4">
-              At APEXIUMINTELLIGENCE LLC, we develop cutting-edge AI systems that automate tasks, 
+              At APEXIUMINTELLIGENCE, we develop cutting-edge AI systems that automate tasks, 
               optimize workflows, and unlock new levels of productivity for businesses and individuals.
             </p>
           </div>
