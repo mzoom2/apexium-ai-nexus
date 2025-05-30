@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Bot, Settings, Lightbulb, User, ArrowRight, CheckCircle, Star } from "lucide-react";
@@ -23,7 +22,7 @@ const Services = () => {
       gradient: "from-blue-500 to-teal-500",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
-      popular: true
+      popular: false
     },
     {
       title: "AI Consulting & Strategy",
@@ -77,9 +76,9 @@ const Services = () => {
             return (
               <Card key={index} className={`relative border-2 ${service.borderColor} shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group ${service.bgColor} animate-fade-in overflow-hidden ${service.popular ? 'ring-2 ring-brand-teal ring-opacity-50' : ''}`} style={{ animationDelay: `${index * 0.1}s` }}>
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
-                    <div className="bg-brand-gradient text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center shadow-lg">
-                      <Star className="w-4 h-4 mr-1" />
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-20">
+                    <div className="bg-brand-gradient text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center shadow-lg">
+                      <Star className="w-4 h-4 mr-2" />
                       Most Popular
                     </div>
                   </div>
@@ -87,7 +86,7 @@ const Services = () => {
                 
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.gradient} opacity-20 rounded-full transform translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-700`}></div>
                 
-                <CardHeader className="pb-4 relative z-10">
+                <CardHeader className={`pb-4 relative z-10 ${service.popular ? 'pt-8' : ''}`}>
                   <div className="flex items-center mb-4">
                     <div className={`p-3 bg-gradient-to-br ${service.gradient} rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                       <IconComponent className="w-8 h-8 text-white" />
