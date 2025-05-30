@@ -18,79 +18,79 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden pt-20 md:pt-0">
+    <section id="home" className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden pt-24 pb-8 px-4 md:pt-0 md:px-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-purple rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-brand-teal rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-brand-purple rounded-full filter blur-2xl animate-bounce" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 bg-brand-purple rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 md:w-64 md:h-64 bg-brand-teal rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 md:w-32 md:h-32 bg-brand-purple rounded-full filter blur-2xl animate-bounce" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* Floating Icons */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Floating Icons - Hidden on mobile for cleaner look */}
+      <div className="absolute inset-0 pointer-events-none hidden md:block">
         <Sparkles className="absolute top-20 left-20 w-6 h-6 text-brand-teal animate-bounce opacity-60" style={{ animationDelay: '0.5s' }} />
         <Zap className="absolute top-32 right-32 w-8 h-8 text-brand-purple animate-pulse opacity-60" style={{ animationDelay: '1.5s' }} />
         <Shield className="absolute bottom-32 left-32 w-7 h-7 text-brand-teal animate-bounce opacity-60" style={{ animationDelay: '2.5s' }} />
       </div>
       
-      <div className="container mx-auto px-4 text-center relative z-10">
+      <div className="container mx-auto text-center relative z-10 max-w-6xl">
         <div className="max-w-4xl mx-auto">
-          {/* Main Heading with Staggered Animation */}
+          {/* Main Heading with Better Mobile Typography */}
           <div className="animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight px-2">
               Building the Future with{" "}
-              <span className="bg-brand-gradient bg-clip-text text-transparent animate-pulse">
+              <span className="bg-brand-gradient bg-clip-text text-transparent animate-pulse block sm:inline mt-2 sm:mt-0">
                 Intelligent Automation
               </span>
             </h1>
           </div>
           
-          {/* Subtitle with Delayed Animation */}
+          {/* Subtitle with Better Mobile Spacing */}
           <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto px-4">
               At APEXIUMINTELLIGENCE LLC, we develop cutting-edge AI systems that automate tasks, 
               optimize workflows, and unlock new levels of productivity for businesses and individuals.
             </p>
           </div>
           
-          {/* CTA Buttons with Delayed Animation */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          {/* CTA Buttons with Better Mobile Layout */}
+          <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
             <Button 
               onClick={scrollToContact}
-              className="w-full sm:w-auto bg-brand-gradient hover:opacity-90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 group hover:scale-105 shadow-2xl hover:shadow-brand-purple/25"
+              className="w-full sm:w-auto bg-brand-gradient hover:opacity-90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 group hover:scale-105 shadow-2xl hover:shadow-brand-purple/25 max-w-sm"
             >
               Get a Free Consultation
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
             <Button 
               onClick={scrollToServices}
               variant="outline"
-              className="w-full sm:w-auto border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-4 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              className="w-full sm:w-auto border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg transition-all duration-300 hover:scale-105 shadow-lg max-w-sm"
             >
               Explore Our Solutions
             </Button>
           </div>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-            <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-bold text-brand-teal mb-2">200+</div>
-              <div className="text-gray-300">Hours Saved Monthly</div>
+          {/* Stats Section with Better Mobile Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 md:mt-16 animate-fade-in px-4" style={{ animationDelay: '0.9s' }}>
+            <div className="text-center group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+              <div className="text-2xl sm:text-3xl font-bold text-brand-teal mb-2">200+</div>
+              <div className="text-gray-300 text-sm sm:text-base">Hours Saved Monthly</div>
             </div>
-            <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-bold text-brand-purple mb-2">99%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
+            <div className="text-center group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+              <div className="text-2xl sm:text-3xl font-bold text-brand-purple mb-2">99%</div>
+              <div className="text-gray-300 text-sm sm:text-base">Accuracy Rate</div>
             </div>
-            <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-bold text-brand-teal mb-2">24/7</div>
-              <div className="text-gray-300">AI Support</div>
+            <div className="text-center group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+              <div className="text-2xl sm:text-3xl font-bold text-brand-teal mb-2">24/7</div>
+              <div className="text-gray-300 text-sm sm:text-base">AI Support</div>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Animated Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* Animated Scroll Indicator - Hidden on small mobile */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
         <div className="w-6 h-10 border-2 border-brand-teal rounded-full flex justify-center">
           <div className="w-1 h-3 bg-brand-teal rounded-full mt-2 animate-pulse"></div>
         </div>
