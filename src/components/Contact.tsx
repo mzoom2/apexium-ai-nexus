@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, Clock } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -114,21 +115,38 @@ const Contact = () => {
           </Card>
 
           <div className="space-y-8 animate-slide-in">
-            <Card className="border-none shadow-lg">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-brand-navy mb-4">Get in Touch</h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="font-semibold text-brand-navy">Email</p>
-                    <p className="text-gray-700">info@apexiumintelligence.com</p>
+            <Card className="border-none shadow-lg bg-gradient-to-br from-brand-navy to-brand-dark hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4 group">
+                    <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-brand-teal text-lg">Email</p>
+                      <p className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer">info@apexiumintelligence.com</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-brand-navy">Phone</p>
-                    <p className="text-gray-700">Available upon request</p>
+                  
+                  <div className="flex items-start space-x-4 group">
+                    <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-brand-teal text-lg">Phone</p>
+                      <p className="text-gray-300">Available upon request</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-brand-navy">Response Time</p>
-                    <p className="text-gray-700">Within 24 hours</p>
+                  
+                  <div className="flex items-start space-x-4 group">
+                    <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-brand-teal text-lg">Response Time</p>
+                      <p className="text-gray-300">Within 24 hours</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>

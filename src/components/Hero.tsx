@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden pt-20 md:pt-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-purple rounded-full filter blur-3xl animate-pulse"></div>
@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Heading with Staggered Animation */}
           <div className="animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
               Building the Future with{" "}
               <span className="bg-brand-gradient bg-clip-text text-transparent animate-pulse">
                 Intelligent Automation
@@ -47,7 +47,7 @@ const Hero = () => {
           
           {/* Subtitle with Delayed Animation */}
           <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
               At APEXIUMINTELLIGENCE LLC, we develop cutting-edge AI systems that automate tasks, 
               optimize workflows, and unlock new levels of productivity for businesses and individuals.
             </p>
