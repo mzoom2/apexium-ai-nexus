@@ -76,7 +76,7 @@ const Header = () => {
                   alt="APEXIUMINTELLIGENCE Logo" 
                   className="w-8 h-8"
                 />
-                <span className="text-white font-bold text-lg">APEXIUM</span>
+                <span className="text-white font-bold text-lg">APEXIUMINTELLIGENCE</span>
               </div>
               
               {/* Mobile Navigation */}
