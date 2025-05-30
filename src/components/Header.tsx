@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -27,13 +26,13 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-navy/95 backdrop-blur-sm border-b border-brand-purple/20 animate-fade-in">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-3 animate-slide-in">
+        <div className="flex items-center space-x-2 md:space-x-3 animate-slide-in">
           <img 
             src="/lovable-uploads/77fbbd5e-05e5-4e64-8f92-899e0b4fd17a.png" 
             alt="APEXIUMINTELLIGENCE LLC Logo" 
-            className="w-10 h-10 hover:scale-110 transition-transform duration-300"
+            className="w-8 h-8 md:w-10 md:h-10 hover:scale-110 transition-transform duration-300"
           />
-          <span className="text-white font-bold text-xl hover:text-brand-teal transition-colors duration-300">
+          <span className="text-white font-bold text-sm sm:text-base md:text-xl hover:text-brand-teal transition-colors duration-300 leading-tight">
             APEXIUMINTELLIGENCE LLC
           </span>
         </div>
