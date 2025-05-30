@@ -15,10 +15,10 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <img 
                 src="/lovable-uploads/77fbbd5e-05e5-4e64-8f92-899e0b4fd17a.png" 
-                alt="APEXIUMINTELLIGENCE LLC Logo" 
+                alt="APEXIUMINTELLIGENCE Logo" 
                 className="w-8 h-8"
               />
-              <span className="text-lg font-bold">APEXIUMINTELLIGENCE LLC</span>
+              <span className="text-lg font-bold">APEXIUMINTELLIGENCE</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Building the future with intelligent automation. Empowering businesses and individuals 
@@ -78,7 +78,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-300">
-              © 2025 APEXIUMINTELLIGENCE LLC. All rights reserved.
+              © 2025 APEXIUMINTELLIGENCE. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-300 hover:text-brand-teal transition-colors">
