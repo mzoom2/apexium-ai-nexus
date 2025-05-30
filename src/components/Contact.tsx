@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -34,14 +35,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-purple rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-teal rounded-full filter blur-3xl"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="contact" className="py-12 md:py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4 md:mb-6 px-2">
             Let's Build Something <span className="bg-brand-gradient bg-clip-text text-transparent">Intelligent Together</span>
@@ -53,7 +48,7 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="border-none shadow-lg animate-slide-in bg-gradient-to-br from-white to-gray-50">
+          <Card className="border-none shadow-lg animate-slide-in">
             <CardHeader className="pb-4">
               <CardTitle className="text-xl md:text-2xl text-brand-navy">Send us a message</CardTitle>
             </CardHeader>
@@ -161,7 +156,7 @@ const Contact = () => {
             </Card>
 
             {/* What to Expect Card */}
-            <Card className="border-none shadow-lg bg-gradient-to-br from-white to-gray-50">
+            <Card className="border-none shadow-lg">
               <CardContent className="p-4 md:p-6">
                 <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-4">What to Expect</h3>
                 <ul className="space-y-3">
