@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Shield } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -19,49 +19,80 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen bg-hero-gradient flex items-center justify-center relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-purple rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-brand-teal rounded-full filter blur-3xl"></div>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-purple rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-brand-teal rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-brand-purple rounded-full filter blur-2xl animate-bounce" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      {/* Floating Icons */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Sparkles className="absolute top-20 left-20 w-6 h-6 text-brand-teal animate-bounce opacity-60" style={{ animationDelay: '0.5s' }} />
+        <Zap className="absolute top-32 right-32 w-8 h-8 text-brand-purple animate-pulse opacity-60" style={{ animationDelay: '1.5s' }} />
+        <Shield className="absolute bottom-32 left-32 w-7 h-7 text-brand-teal animate-bounce opacity-60" style={{ animationDelay: '2.5s' }} />
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Building the Future with{" "}
-            <span className="bg-brand-gradient bg-clip-text text-transparent">
-              Intelligent Automation
-            </span>
-          </h1>
+        <div className="max-w-4xl mx-auto">
+          {/* Main Heading with Staggered Animation */}
+          <div className="animate-fade-in">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Building the Future with{" "}
+              <span className="bg-brand-gradient bg-clip-text text-transparent animate-pulse">
+                Intelligent Automation
+              </span>
+            </h1>
+          </div>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            At APEXIUMINTELLIGENCE LLC, we develop cutting-edge AI systems that automate tasks, 
-            optimize workflows, and unlock new levels of productivity for businesses and individuals.
-          </p>
+          {/* Subtitle with Delayed Animation */}
+          <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+              At APEXIUMINTELLIGENCE LLC, we develop cutting-edge AI systems that automate tasks, 
+              optimize workflows, and unlock new levels of productivity for businesses and individuals.
+            </p>
+          </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* CTA Buttons with Delayed Animation */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <Button 
               onClick={scrollToContact}
-              className="bg-brand-gradient hover:opacity-90 text-white font-semibold px-8 py-3 rounded-lg text-lg transition-opacity group"
+              className="w-full sm:w-auto bg-brand-gradient hover:opacity-90 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 group hover:scale-105 shadow-2xl hover:shadow-brand-purple/25"
             >
               Get a Free Consultation
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
             <Button 
               onClick={scrollToServices}
               variant="outline"
-              className="border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-3 rounded-lg text-lg transition-all"
+              className="w-full sm:w-auto border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white px-8 py-4 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Explore Our Solutions
             </Button>
           </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+            <div className="text-center group hover:scale-105 transition-transform duration-300">
+              <div className="text-3xl font-bold text-brand-teal mb-2">200+</div>
+              <div className="text-gray-300">Hours Saved Monthly</div>
+            </div>
+            <div className="text-center group hover:scale-105 transition-transform duration-300">
+              <div className="text-3xl font-bold text-brand-purple mb-2">99%</div>
+              <div className="text-gray-300">Accuracy Rate</div>
+            </div>
+            <div className="text-center group hover:scale-105 transition-transform duration-300">
+              <div className="text-3xl font-bold text-brand-teal mb-2">24/7</div>
+              <div className="text-gray-300">AI Support</div>
+            </div>
+          </div>
         </div>
       </div>
       
-      {/* Scroll Indicator */}
+      {/* Animated Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-brand-teal rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-brand-teal rounded-full mt-2"></div>
+          <div className="w-1 h-3 bg-brand-teal rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
