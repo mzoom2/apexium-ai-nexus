@@ -1,4 +1,6 @@
 
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -24,6 +26,44 @@ const Footer = () => {
               Building the future with intelligent automation. Empowering businesses and individuals 
               with powerful AI tools that drive growth and productivity.
             </p>
+            <div className="flex space-x-4 mb-4">
+              <a 
+                href="https://www.instagram.com/p/DKS7z6UsDzD/?igsh=MWpueGo5dHFsZjc2bg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-teal transition-colors"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.facebook.com/photo.php?fbid=122097508436895886&set=a.122096726468895886&type=3&mibextid=rS40aB7S9Ucbxw6v"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-teal transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/apexiumin-intelligence-263262369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-teal transition-colors"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://x.com/Apexiumint5822/status/1928873624741511519?t=dX8siMFgddejOoR_vKwVmg&s=19"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-teal transition-colors"
+              >
+                <Twitter className="w-6 h-6" />
+              </a>
+            </div>
+            <div className="space-y-2 text-gray-300">
+              <p>📧 info@ApexiumIntelligence.com</p>
+              <p>📞 +1 (346) 558-0110</p>
+            </div>
           </div>
           
           <div>

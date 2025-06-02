@@ -128,7 +128,7 @@ const Contact = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="font-semibold text-brand-teal text-base md:text-lg">Email</p>
-                      <p className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer text-sm md:text-base break-all">info@apexiumintelligence.com</p>
+                      <p className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer text-sm md:text-base break-all">info@ApexiumIntelligence.com</p>
                     </div>
                   </div>
                   
@@ -138,7 +138,7 @@ const Contact = () => {
                     </div>
                     <div className="min-w-0 flex-1">
                       <p className="font-semibold text-brand-teal text-base md:text-lg">Phone</p>
-                      <p className="text-gray-300 text-sm md:text-base">Available upon request</p>
+                      <p className="text-gray-300 text-sm md:text-base">+1 (346) 558-0110</p>
                     </div>
                   </div>
                   
