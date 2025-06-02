@@ -1,39 +1,8 @@
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone, Clock, Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: '', email: '', company: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <section id="contact" className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -47,109 +16,104 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
+          {/* Contact Methods */}
           <Card className="border-none shadow-lg animate-slide-in">
             <CardHeader className="pb-4">
-              <CardTitle className="text-xl md:text-2xl text-brand-navy">Send us a message</CardTitle>
+              <CardTitle className="text-xl md:text-2xl text-brand-navy">Get in Touch</CardTitle>
+              <p className="text-gray-600">Choose your preferred way to reach us</p>
             </CardHeader>
             <CardContent className="pt-0">
-              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="name" className="text-brand-navy font-semibold text-sm">Name *</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="mt-1 h-11"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email" className="text-brand-navy font-semibold text-sm">Email *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="mt-1 h-11"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <Label htmlFor="company" className="text-brand-navy font-semibold text-sm">Company</Label>
-                  <Input
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="mt-1 h-11"
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="message" className="text-brand-navy font-semibold text-sm">Message *</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your project or how we can help..."
-                    required
-                    className="mt-1 resize-none"
-                  />
-                </div>
-                
-                <Button 
-                  type="submit"
-                  className="w-full bg-brand-gradient hover:opacity-90 text-white font-semibold py-3 rounded-lg text-base md:text-lg transition-opacity h-12"
+              <div className="space-y-6">
+                {/* Email */}
+                <a 
+                  href="mailto:info@ApexiumIntelligence.com"
+                  className="flex items-center space-x-4 p-4 bg-gradient-to-r from-brand-navy to-brand-dark rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
                 >
-                  Send Message
-                </Button>
-              </form>
+                  <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white text-lg">Email Us</p>
+                    <p className="text-brand-teal">info@ApexiumIntelligence.com</p>
+                  </div>
+                </a>
+
+                {/* Phone */}
+                <a 
+                  href="tel:+13465580110"
+                  className="flex items-center space-x-4 p-4 bg-gradient-to-r from-brand-navy to-brand-dark rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
+                >
+                  <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white text-lg">Call Us</p>
+                    <p className="text-brand-teal">+1 (346) 558-0110</p>
+                  </div>
+                </a>
+
+                {/* Social Media Section */}
+                <div className="pt-4">
+                  <h3 className="text-lg font-semibold text-brand-navy mb-4">Follow & Message Us</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <a 
+                      href="https://www.instagram.com/p/DKS7z6UsDzD/?igsh=MWpueGo5dHFsZjc2bg=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 p-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
+                    >
+                      <Instagram className="w-5 h-5 text-white" />
+                      <span className="text-white font-medium">Instagram</span>
+                    </a>
+
+                    <a 
+                      href="https://www.facebook.com/photo.php?fbid=122097508436895886&set=a.122096726468895886&type=3&mibextid=rS40aB7S9Ucbxw6v"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 p-3 bg-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
+                    >
+                      <Facebook className="w-5 h-5 text-white" />
+                      <span className="text-white font-medium">Facebook</span>
+                    </a>
+
+                    <a 
+                      href="https://www.linkedin.com/in/apexiumin-intelligence-263262369?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 p-3 bg-blue-700 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
+                    >
+                      <Linkedin className="w-5 h-5 text-white" />
+                      <span className="text-white font-medium">LinkedIn</span>
+                    </a>
+
+                    <a 
+                      href="https://x.com/Apexiumint5822/status/1928873624741511519?t=dX8siMFgddejOoR_vKwVmg&s=19"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 p-3 bg-black rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group"
+                    >
+                      <Twitter className="w-5 h-5 text-white" />
+                      <span className="text-white font-medium">X (Twitter)</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
           {/* Contact Info and What to Expect */}
           <div className="space-y-6 md:space-y-8 animate-slide-in">
-            {/* Get in Touch Card */}
+            {/* Response Time Card */}
             <Card className="border-none shadow-lg bg-gradient-to-br from-brand-navy to-brand-dark hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">Get in Touch</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4 group">
-                    <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <Mail className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="font-semibold text-brand-teal text-base md:text-lg">Email</p>
-                      <p className="text-gray-300 hover:text-white transition-colors duration-300 cursor-pointer text-sm md:text-base break-all">info@ApexiumIntelligence.com</p>
-                    </div>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-6 text-center">Quick Response</h3>
+                <div className="flex items-center justify-center space-x-4 group">
+                  <div className="p-4 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300">
+                    <Clock className="w-8 h-8 text-white" />
                   </div>
-                  
-                  <div className="flex items-start space-x-4 group">
-                    <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <Phone className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="font-semibold text-brand-teal text-base md:text-lg">Phone</p>
-                      <p className="text-gray-300 text-sm md:text-base">+1 (346) 558-0110</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4 group">
-                    <div className="p-3 bg-brand-gradient rounded-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                      <Clock className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="font-semibold text-brand-teal text-base md:text-lg">Response Time</p>
-                      <p className="text-gray-300 text-sm md:text-base">Within 24 hours</p>
-                    </div>
+                  <div>
+                    <p className="font-semibold text-brand-teal text-lg">Response Time</p>
+                    <p className="text-gray-300 text-base">Within 24 hours</p>
                   </div>
                 </div>
               </CardContent>
