@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Bot, Settings, Lightbulb, User, ArrowRight, CheckCircle, Star } from "lucide-react";
@@ -22,7 +23,7 @@ const Services = () => {
       gradient: "from-blue-500 to-teal-500",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
-      popular: false
+      popular: true
     },
     {
       title: "AI Consulting & Strategy",
@@ -103,15 +104,6 @@ const Services = () => {
                         <span className="group-hover/feature:text-brand-navy transition-colors duration-200">{feature}</span>
                       </div>
                     ))}
-                  </div>
-                  <div className="mt-6">
-                    <Button 
-                      variant="outline" 
-                      className={`w-full border-2 hover:bg-gradient-to-r ${service.gradient} hover:text-white hover:border-transparent transition-all duration-300 group-hover:shadow-lg`}
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Button>
                   </div>
                 </CardContent>
               </Card>
