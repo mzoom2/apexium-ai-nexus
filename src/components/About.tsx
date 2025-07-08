@@ -52,6 +52,19 @@ const About = () => {
           </div>
         </div>
 
+        {/* Hero Image Section */}
+        <div className="flex justify-center mb-16 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-brand-gradient rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="AI and Technology Innovation"
+              className="relative w-full max-w-2xl h-64 md:h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/20 to-transparent rounded-2xl"></div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="group">
             <Card className="h-full border-none shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50 animate-slide-in">
