@@ -33,12 +33,11 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto relative z-10 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
+        {/* Main Content - Centered */}
+        <div className="text-center mb-12">
             {/* Main Heading with Better Mobile Typography */}
             <div className="animate-fade-in">
-              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2 max-w-4xl mx-auto">
                 Building the Future with{" "}
                 <span className="bg-brand-gradient bg-clip-text text-transparent animate-pulse block sm:inline mt-1 sm:mt-0">
                   Intelligent Automation
@@ -48,14 +47,14 @@ const Hero = () => {
             
             {/* Subtitle with Better Mobile Spacing */}
             <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto lg:mx-0 px-4 lg:px-0">
+              <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto px-4">
                 At APEXIUMINTELLIGENCE, we develop cutting-edge AI systems that automate tasks, 
                 optimize workflows, and unlock new levels of productivity for businesses and individuals.
               </p>
             </div>
             
             {/* CTA Buttons with Better Mobile Layout */}
-            <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start items-center lg:items-start animate-fade-in px-4 lg:px-0" style={{ animationDelay: '0.6s' }}>
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 justify-center items-center animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
               <Button 
                 onClick={scrollToContact}
                 className="w-full sm:w-auto bg-brand-gradient hover:opacity-90 text-white font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg text-sm sm:text-base md:text-lg transition-all duration-300 group hover:scale-105 shadow-2xl hover:shadow-brand-purple/25 max-w-sm"
@@ -73,7 +72,7 @@ const Hero = () => {
             </div>
 
             {/* Stats Section with Better Mobile Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-8 sm:mt-12 md:mt-16 animate-fade-in px-4 lg:px-0" style={{ animationDelay: '0.9s' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-8 sm:mt-12 md:mt-16 animate-fade-in px-4 max-w-4xl mx-auto" style={{ animationDelay: '0.9s' }}>
               <div className="text-center group hover:scale-105 transition-transform duration-300 bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/10">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-teal mb-1 sm:mb-2">200+</div>
                 <div className="text-gray-300 text-xs sm:text-sm md:text-base">Hours Saved Monthly</div>
@@ -87,19 +86,18 @@ const Hero = () => {
                 <div className="text-gray-300 text-xs sm:text-sm md:text-base">AI Support</div>
               </div>
             </div>
-          </div>
+        </div>
 
-          {/* Right Image */}
-          <div className="hidden lg:block animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-brand-gradient rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+        {/* Hero Image - Positioned below content */}
+        <div className="flex justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="relative group max-w-2xl">
+            <div className="absolute -inset-4 bg-brand-gradient rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <img 
                 src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="AI Technology and Innovation"
-                className="relative w-full h-96 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                className="relative w-full h-48 md:h-64 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 to-transparent rounded-2xl"></div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/30 to-transparent rounded-2xl"></div>
           </div>
         </div>
       </div>
