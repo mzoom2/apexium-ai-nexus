@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ElevenLabsWidget from "@/components/ElevenLabsWidget";
 
 const Index = () => {
   return (
@@ -25,15 +26,7 @@ const Index = () => {
       <Footer />
       
       {/* ElevenLabs ConvAI Widget - Fixed bottom left */}
-      <div 
-        className="fixed bottom-4 left-4 z-50"
-        dangerouslySetInnerHTML={{
-          __html: `
-            <elevenlabs-convai agent-id="agent_01jzzxevmhfras98mmrrvyqsac"></elevenlabs-convai>
-            <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-          `
-        }}
-      />
+      <ElevenLabsWidget />
     </div>
   );
 };
