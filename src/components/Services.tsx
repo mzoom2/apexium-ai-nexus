@@ -71,6 +71,19 @@ const Services = () => {
           </p>
         </div>
 
+        {/* Technology Showcase Image */}
+        <div className="flex justify-center mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="relative group max-w-4xl">
+            <div className="absolute -inset-4 bg-brand-gradient rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+              alt="Advanced Technology and Circuit Boards"
+              className="relative w-full h-64 md:h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/30 to-transparent rounded-2xl"></div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {services.map((service, index) => {
             const IconComponent = service.icon;
