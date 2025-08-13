@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             <div className="space-y-2 text-gray-300">
               <p>📧 info@ApexiumIntelligence.com</p>
-              <p>📞 +1 (346) 558-0110</p>
+              <p>📞 +1 (346) 859-3202</p>
             </div>
           </div>
           
